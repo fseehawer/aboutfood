@@ -1,0 +1,14 @@
+@import "../../assets/variables";
+
+.filter {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 0.2rem 0.6rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-items: center;
+  color: $text-color-light;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+@import "../../assets/variables";
+
+.card {
+  background: $background-color-light;
+  width: 100%;
+  margin-bottom: 2%;
+  opacity: 0;
+
+  &__image {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem 2rem;
+  }
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+  &__description {
+    margin: 2rem 0;
+  }
+}

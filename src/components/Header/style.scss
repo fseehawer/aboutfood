@@ -1,0 +1,132 @@
+@import "../../assets/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+
+  &__logo {
+    font-size: 2rem;
+
+    span {
+      font-weight: 200;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    margin: 1rem 0;
+
+    li {
+      margin-left: 1.5rem;
+      cursor: pointer;
+      transition: color 0.4s;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+
+  &__menu-line {
+    display: none;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 6px;
+    position: relative;
+    background: $text-color;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 2px 2px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+  }
+
+  &__menu-line:first-child {
+    transform-origin: 0 0;
+  }
+
+  &__menu-line:last-child {
+    transform-origin: 0 100%;
+  }
+
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -2.4rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  // when selected
+  input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(0, 0);
+    background: $text-color;
+  }
+
+  input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+
+  // for smaller screens
+  @media only screen and (max-width: 800px) {
+    margin: 2rem 0 0 0;
+
+    &__logo {
+      margin-left: 2rem;
+    }
+
+    nav {
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
+    input:checked ~ ul
+    {
+      transform: translate(-100%, 0);
+    }
+
+    &__menu-line {
+      display: block;
+      right: 2rem;
+    }
+
+    &__nav {
+      display: block;
+      position: fixed;
+      background: $background-color;
+      padding: 2rem 3rem;
+      box-sizing: border-box;
+      width: 60%;
+      margin: 0;
+      transform-origin: 0 0;
+      transform: translate(0, 0);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+      li {
+        font-size: 2rem;
+        margin: 1.5rem 0 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.main {
+  margin: 0 3rem;
+
+  &__filters {
+    margin-left: 1rem;
+  }
+
+  &__cards {
+    margin: 2rem 0;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: repeat(auto-fill, 24%);
+    justify-content: space-between;
+
+    // for smaller screens
+    @media only screen and (max-width: 1300px) {
+      grid-template-columns: repeat(auto-fill, 32%);
+    }
+
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: repeat(auto-fill, 49%);
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: repeat(auto-fill, 100%);
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin: 0 2rem;
+  }
+}
