@@ -30,7 +30,47 @@
     }
   }
 
+  &__tag {
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    padding: 0 0.6rem;
+    color: $text-color-light;
+    display: inline-flex;
+    align-items: center;
+    height: 1.5rem;
+
+    &--meat {
+      background-color: $tag-meat;
+    }
+
+    &--fruit {
+      background-color: $tag-fruit;
+    }
+
+    &--vegetables {
+      background-color: $tag-vegetables;
+    }
+  }
+
   &__description {
     margin: 2rem 0;
+  }
+
+  &__more {
+    span {
+      font-size: 1.2rem;
+    }
+
+    &--meat {
+      color: $tag-meat;
+    }
+
+    &--fruit {
+      color: $tag-fruit;
+    }
+
+    &--vegetables {
+      color: $tag-vegetables;
+    }
   }
 }

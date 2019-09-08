@@ -10,12 +10,12 @@ const Card = (props) => {
             <div className="card__content">
                 <div className="card__headline">
                     <h2>{props.title}</h2>
-                    <span className="card__tag card__tag--meat">{props.tag}</span>
+                    <span className={`card__tag card__tag--${props.tag.toLowerCase()}`}>{props.tag}</span>
                 </div>
                 <div className="card__description">
                     {props.about}
                 </div>
-                <div className="card__more">More</div>
+                <div className="card__more"><span className={`card__more--${props.tag.toLowerCase()}`}>&raquo;</span> More info</div>
             </div>
         </div>
     );
