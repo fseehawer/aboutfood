@@ -41,7 +41,7 @@
     position: relative;
     background: $text-color;
     border-radius: 3px;
-    z-index: 1;
+    z-index: 100;
     transform-origin: 2px 2px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -65,7 +65,7 @@
     left: -2.4rem;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 101;
     -webkit-touch-callout: none;
   }
 
@@ -103,7 +103,7 @@
 
     input:checked ~ ul
     {
-      transform: translate(-100%, 0);
+      transform: translate(-99%, 0);
     }
 
     &__menu-line {
@@ -118,10 +118,12 @@
       padding: 2rem 3rem;
       box-sizing: border-box;
       width: 60%;
+      height: 100%;
       margin: 0;
       transform-origin: 0 0;
       transform: translate(0, 0);
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      z-index: 99;
 
       li {
         font-size: 2rem;

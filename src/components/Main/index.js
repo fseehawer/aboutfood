@@ -48,7 +48,7 @@ const Main = () => {
     return (
         <main className="main">
             <div className="main__filters">
-                Filter:
+                <span className="filters__label">Filter:</span>
                 <Filter name="Meat" color="#e73c01" onChange={filterChange} />
                 <Filter name="Vegetables" color="#2b9030" onChange={filterChange} />
                 <Filter name="Fruit" color="#f39200" onChange={filterChange} />
