@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.scss';
+import PropTypes from "prop-types";
 
 const Filter = (props) => {
     const [checked, setChecked] = useState(0);
@@ -15,6 +16,11 @@ const Filter = (props) => {
             {props.name}
         </label>
     );
-}
+};
+
+Filter.propTypes = {
+    name: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+};
 
 export default Filter;

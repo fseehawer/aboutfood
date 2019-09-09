@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import PropTypes from "prop-types";
 
 const Header = (props) => (
     <header className="header" style={{margin: props.margin}}>
@@ -22,5 +23,9 @@ const Header = (props) => (
         </nav>
     </header>
 );
+
+Header.propTypes = {
+    margin: PropTypes.string,
+};
 
 export default Header;
