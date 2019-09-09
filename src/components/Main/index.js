@@ -11,7 +11,7 @@ const Main = () => {
     const [tags, setTags] = useState([]);
 
     const filteredData = data.filter(item => {
-        return tags.includes(item.tags[0])
+        return tags.includes(item.tag)
     });
 
     const filterChange = (tag) => {
@@ -28,7 +28,7 @@ const Main = () => {
             return (
                 <Card
                     key={item.id}
-                    tag={item.tags[0]}
+                    tag={item.tag}
                     imageSrc={item.imageSrc}
                     title={item.title}
                     about={item.about}
