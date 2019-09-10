@@ -30,6 +30,7 @@ const Main = () => {
                     key={item.id}
                     tag={item.tag}
                     imageSrc={item.imageSrc}
+                    imageWebpSrc={item.imageWebpSrc}
                     title={item.title}
                     about={item.about}
                     description={item.description}

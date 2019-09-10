@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'react-image-webp';
 import './style.scss';
 
 const Card = (props) => {
     return (
         <div className="card">
             <div className="card__image">
-                <img src={props.imageSrc} alt={props.title} />
+                <Image src={props.imageSrc} webp={props.imageWebpSrc} alt={props.title} />
             </div>
             <div className="card__content">
                 <div className="card__headline">
@@ -24,6 +25,7 @@ const Card = (props) => {
 
 Card.propTypes = {
     imageSrc: PropTypes.string.isRequired,
+    imageWebpSrc: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
