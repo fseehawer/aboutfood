@@ -4,6 +4,7 @@
   "homepage": "./",
   "private": true,
   "dependencies": {
+    "eslint-utils": "1.4.2",
     "gsap": "^2.1.3",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
