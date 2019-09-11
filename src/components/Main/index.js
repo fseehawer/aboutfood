@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TweenMax, Power4 } from 'gsap';
 import './style.scss';
-import Filter from '../Filter';
 import Card from "../Card";
 
 // get data
@@ -44,7 +43,7 @@ const Main = () => {
         TweenMax.staggerFromTo('.card', 0.4,
             { opacity: 0, y: 100, scale: 0.8},
             { opacity: 1, y: 0, scale: 1, ease: Power4.easeOut }, 0.05);
-        return () => TweenMax.set('.card', { opacity:0 });
+        return () => TweenMax.set('.card', { opacity: 0 });
     }, [tags]);
 
     return (
