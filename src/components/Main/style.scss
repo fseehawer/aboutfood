@@ -38,11 +38,3 @@
     margin: 0 2rem;
   }
 }
-
-.filters {
-  &__label {
-    @media only screen and (max-width: 400px) {
-      display: none;
-    }
-  }
-}

@@ -1,0 +1,9 @@
+@import "../../assets/variables";
+
+.filter {
+  &__label {
+    @media only screen and (max-width: 400px) {
+      display: none;
+    }
+  }
+}

@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 const Filter = (props) => {
     const [checked, setChecked] = useState(0);
 
-    const onChange = () => {
+    const onCheckboxChange = () => {
         setChecked(!checked);
         props.onChange(props.name);
     };
 
     return (
         <label htmlFor={props.name} className="filter" style={{backgroundColor: props.color}}>
-            <input type="checkbox" id={props.name} name={props.name} checked={checked} onChange={onChange}/>
+            <input type="checkbox" id={props.name} name={props.name} checked={checked} onChange={onCheckboxChange}/>
             {props.name}
         </label>
     );

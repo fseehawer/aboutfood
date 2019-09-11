@@ -6,6 +6,7 @@ import Card from "../Card";
 
 // get data
 import data from '../../data';
+import Categories from "../Categories";
 
 const Main = () => {
     const [tags, setTags] = useState([]);
@@ -14,7 +15,7 @@ const Main = () => {
         return tags.includes(item.tag)
     });
 
-    const filterChange = (tag) => {
+    const onFilterChange = (tag) => {
         if(tags.includes(tag)) {
             setTags(tags.filter(t => tag !== t));
             return;
@@ -43,16 +44,17 @@ const Main = () => {
         TweenMax.staggerFromTo('.card', 0.4,
             { opacity: 0, y: 100, scale: 0.8},
             { opacity: 1, y: 0, scale: 1, ease: Power4.easeOut }, 0.05);
-        return () => TweenMax.set('.card', {opacity:1});
+        return () => TweenMax.set('.card', { opacity:0 });
     }, [tags]);
 
     return (
         <main className="main">
             <div className="main__filters">
-                <span className="filters__label">Filter:</span>
-                <Filter name="Meat" color="#e73c01" onChange={filterChange} />
-                <Filter name="Vegetables" color="#2b9030" onChange={filterChange} />
-                <Filter name="Fruit" color="#f39200" onChange={filterChange} />
+                <Categories onChange={ onFilterChange } options={[
+                    { name: 'Meat', color: '#e73c01', key: 1 },
+                    { name: 'Vegetables', color: '#2b9030', key: 2 },
+                    { name: 'Fruit', color: '#f39200', key: 3 },
+                ]} />
             </div>
             <section>
                 <div className="main__cards">
