@@ -12,7 +12,7 @@ const Filter = (props) => {
 
     return (
         <label htmlFor={props.name} className="filter" style={{backgroundColor: props.color}}>
-            <input type="checkbox" id={props.name} name={props.name} checked={checked} onChange={onCheckboxChange}/>
+            <input aria-label={props.name} type="checkbox" id={props.name} name={props.name} checked={checked} onChange={onCheckboxChange}/>
             {props.name}
         </label>
     );
