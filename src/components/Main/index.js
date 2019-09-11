@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { TweenMax, Power4 } from 'gsap';
 import './style.scss';
 import Card from "../Card";
+import Categories from "../Categories";
 
 // get data
 import data from '../../data';
-import Categories from "../Categories";
 
 const Main = () => {
     const [tags, setTags] = useState([]);
