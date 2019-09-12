@@ -50,9 +50,9 @@ const Main = React.memo(() => {
         <main className="main">
             <div className="main__filters">
                 <Categories onChange={ onFilterChange } options={[
-                    { name: 'Meat', color: '#e73c01', key: 1 },
-                    { name: 'Vegetables', color: '#2b9030', key: 2 },
-                    { name: 'Fruit', color: '#f39200', key: 3 },
+                    { name: 'Meat', color: '#e73c01', key: '1' },
+                    { name: 'Vegetables', color: '#2b9030', key: '2' },
+                    { name: 'Fruit', color: '#f39200', key: '3' },
                 ]} />
             </div>
             <section>

@@ -10,7 +10,7 @@ const Categories = React.memo((props) => {
 
     const renderFilters = () => {
         return (props.options.map((filter) => {
-            return (<Filter key={filter.key} name={ filter.name } color={ filter.color } onChange={ filterChange } />)
+            return (<Filter key={filter.key.toString()} name={ filter.name } color={ filter.color } onChange={ filterChange } />)
         }))
     };
 
@@ -26,7 +26,7 @@ Categories.propTypes = {
     options: PropTypes.arrayOf(PropTypes.exact({
         name: PropTypes.string.isRequired,
         color: PropTypes.string.isRequired,
-        key: PropTypes.number.isRequired,
+        key: PropTypes.string.isRequired,
     }))
 };
 
