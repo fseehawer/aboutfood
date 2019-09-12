@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Image from 'react-image-webp';
 import './style.scss';
 
-const Card = (props) => {
+const Card = React.memo((props) => {
     return (
         <div className="card">
             <div className="card__image">
@@ -21,7 +21,7 @@ const Card = (props) => {
             </div>
         </div>
     );
-};
+});
 
 Card.propTypes = {
     imageSrc: PropTypes.string.isRequired,

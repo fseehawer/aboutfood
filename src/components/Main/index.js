@@ -7,7 +7,7 @@ import Categories from "../Categories";
 // get data
 import data from '../../data';
 
-const Main = () => {
+const Main = React.memo(() => {
     const [tags, setTags] = useState([]);
 
     const filteredData = data.filter(item => {
@@ -62,6 +62,6 @@ const Main = () => {
             </section>
         </main>
     );
-};
+});
 
 export default Main;

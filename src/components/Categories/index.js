@@ -3,7 +3,7 @@ import './style.scss';
 import PropTypes from "prop-types";
 import Filter from "../Filter";
 
-const Categories = (props) => {
+const Categories = React.memo((props) => {
     const filterChange = (name) => {
         props.onChange(name);
     };
@@ -20,7 +20,7 @@ const Categories = (props) => {
             { renderFilters() }
         </Fragment>
     );
-};
+});
 
 Categories.propTypes = {
     options: PropTypes.arrayOf(PropTypes.exact({

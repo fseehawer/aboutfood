@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import PropTypes from "prop-types";
 
-const Header = (props) => (
+const Header = React.memo((props) => (
     <header className="header" style={{margin: props.margin}}>
         <div className="header__logo">about<span>food</span></div>
         <nav role="navigation">
@@ -22,7 +22,7 @@ const Header = (props) => (
             </ul>
         </nav>
     </header>
-);
+));
 
 Header.propTypes = {
     margin: PropTypes.string,

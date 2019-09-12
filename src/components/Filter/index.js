@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import PropTypes from "prop-types";
 
-const Filter = (props) => {
+const Filter = React.memo((props) => {
     const [checked, setChecked] = useState(0);
 
     const onCheckboxChange = () => {
@@ -16,7 +16,7 @@ const Filter = (props) => {
             {props.name}
         </label>
     );
-};
+});
 
 Filter.propTypes = {
     name: PropTypes.string.isRequired,
