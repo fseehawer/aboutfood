@@ -1,23 +1,23 @@
-import { CHANGE_TAG } from "../actions";
+import { CHANGE_CATEGORY } from "../actions";
 
 const initialState = {
-    tags: [],
+    categories: [],
 };
 
-const tagsReducer = (state = initialState, action) => {
-    if(action.type === CHANGE_TAG) {
-        if(state.tags.includes(action.tag)) {
+const categoryReducer = (state = initialState, action) => {
+    if(action.type === CHANGE_CATEGORY) {
+        if(state.categories.includes(action.category)) {
             return {
-                tags: state.tags.filter(t => action.tag !== t)
+                categories: state.categories.filter(c => action.category !== c)
             };
         }
 
         return {
-            tags: [...state.tags, action.tag]
+            categories: [...state.categories, action.category]
         }
     }
 
     return state;
 };
 
-export default tagsReducer;
+export default categoryReducer;

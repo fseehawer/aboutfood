@@ -9,20 +9,20 @@ import Categories from "../Categories";
 import data from '../../data';
 
 const Main = React.memo(() => {
-    const { tags } = useSelector(state => ({
-        tags: state.tags
+    const { categories } = useSelector(state => ({
+        categories: state.categories
     }));
 
     const filteredData = data.filter(item => {
-        return tags.includes(item.tag)
+        return categories.includes(item.category)
     });
 
     const renderCards = () => {
-        return (tags.length ? filteredData : data).map(item => {
+        return (categories.length ? filteredData : data).map(item => {
             return (
                 <Card
                     key={item.id}
-                    tag={item.tag}
+                    category={item.category}
                     imageSrc={item.imageSrc}
                     imageWebpSrc={item.imageWebpSrc}
                     title={item.title}
@@ -38,7 +38,7 @@ const Main = React.memo(() => {
             { opacity: 0, y: 100, scale: 0.8},
             { opacity: 1, y: 0, scale: 1, ease: Power4.easeOut }, 0.05);
         return () => TweenMax.set('.card', { opacity: 0 });
-    }, [tags]);
+    }, [categories]);
 
     return (
         <main className="main">

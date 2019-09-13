@@ -1,25 +1,25 @@
 import React, { Fragment, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeTag } from "../../actions";
+import { changeCategory } from "../../actions";
 import './style.scss';
 import PropTypes from "prop-types";
 import Filter from "../Filter";
 
 const Categories = React.memo((props) => {
-    const { tags } = useSelector(state => ({
-        tags: state.tags
+    const { categories } = useSelector(state => ({
+        categories: state.categories
     }));
 
     const dispatch = useDispatch();
 
     const onFilterChange = useCallback(
-        (tag) => dispatch(changeTag(tag)),
+        (category) => dispatch(changeCategory(category)),
         [dispatch]
     );
 
     const renderFilters = () => {
         return (props.options.map((filter) => {
-            return (<Filter key={filter.key.toString()} name={ filter.name } checked={ tags.includes(filter.name) } color={ filter.color } onChange={ onFilterChange } />)
+            return (<Filter key={filter.key.toString()} name={ filter.name } checked={ categories.includes(filter.name) } color={ filter.color } onChange={ onFilterChange } />)
         }))
     };
 

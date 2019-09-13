@@ -1,7 +1,7 @@
 const data = [
     {
         "id": 1,
-        "tag": "Fruit",
+        "category": "Fruit",
         "imageSrc": require("./assets/images/1.jpg"),
         "imageWebpSrc": require("./assets/images/1.webp"),
         "title": "Apple",
@@ -10,7 +10,7 @@ const data = [
     },
     {
         "id": 2,
-        "tag": "Vegetables",
+        "category": "Vegetables",
         "imageSrc": require("./assets/images/2.jpg"),
         "imageWebpSrc": require("./assets/images/2.webp"),
         "title": "Aubergine",
@@ -19,7 +19,7 @@ const data = [
     },
     {
         "id": 3,
-        "tag": "Fruit",
+        "category": "Fruit",
         "imageSrc": require("./assets/images/3.jpg"),
         "imageWebpSrc": require("./assets/images/3.webp"),
         "title": "Banana",
@@ -28,7 +28,7 @@ const data = [
     },
     {
         "id": 4,
-        "tag": "Vegetables",
+        "category": "Vegetables",
         "imageSrc": require("./assets/images/4.jpg"),
         "imageWebpSrc": require("./assets/images/4.webp"),
         "title": "Broccoli",
@@ -37,7 +37,7 @@ const data = [
     },
     {
         "id": 7,
-        "tag": "Meat",
+        "category": "Meat",
         "imageSrc": require("./assets/images/7.jpg"),
         "imageWebpSrc": require("./assets/images/7.webp"),
         "title": "Beef",
@@ -46,7 +46,7 @@ const data = [
     },
     {
         "id": 6,
-        "tag": "Fruit",
+        "category": "Fruit",
         "imageSrc": require("./assets/images/6.jpg"),
         "imageWebpSrc": require("./assets/images/6.webp"),
         "title": "Orange",
@@ -55,7 +55,7 @@ const data = [
     },
     {
         "id": 5,
-        "tag": "Meat",
+        "category": "Meat",
         "imageSrc": require("./assets/images/5.jpg"),
         "imageWebpSrc": require("./assets/images/5.webp"),
         "title": "Chicken",
@@ -64,7 +64,7 @@ const data = [
     },
     {
         "id": 8,
-        "tag": "Vegetables",
+        "category": "Vegetables",
         "imageSrc": require("./assets/images/8.jpg"),
         "imageWebpSrc": require("./assets/images/8.webp"),
         "title": "Zucchini",

@@ -1,8 +1,8 @@
-export const CHANGE_TAG = 'CHANGE_TAG';
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
 
-export const changeTag = (tag) => {
+export const changeCategory = (category) => {
     return {
-      type: CHANGE_TAG,
-      tag
+      type: CHANGE_CATEGORY,
+      category
     };
 };

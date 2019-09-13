@@ -30,7 +30,7 @@
     }
   }
 
-  &__tag {
+  &__category {
     font-size: 0.8rem;
     border-radius: 1rem;
     padding: 0 0.6rem;
@@ -40,15 +40,15 @@
     height: 1.5rem;
 
     &--meat {
-      background-color: $tag-meat;
+      background-color: $category-meat;
     }
 
     &--fruit {
-      background-color: $tag-fruit;
+      background-color: $category-fruit;
     }
 
     &--vegetables {
-      background-color: $tag-vegetables;
+      background-color: $category-vegetables;
     }
   }
 
@@ -63,15 +63,15 @@
     }
 
     &--meat {
-      color: $tag-meat;
+      color: $category-meat;
     }
 
     &--fruit {
-      color: $tag-fruit;
+      color: $category-fruit;
     }
 
     &--vegetables {
-      color: $tag-vegetables;
+      color: $category-vegetables;
     }
   }
 }
