@@ -5,9 +5,10 @@ import { Provider } from 'react-redux';
 import reducer from './reducers';
 import './index.scss';
 import App from './app';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(reducer);
+const store = createStore(reducer, composeWithDevTools());
 
 ReactDOM.render(
     <Provider store={store}>
