@@ -5,11 +5,21 @@
   width: 100%;
   margin-bottom: 2%;
   opacity: 0;
+  border-radius: 3px;
+  overflow: hidden;
 
   &__image {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
     overflow: hidden;
 
     img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       width: 100%;
       height: auto;
       object-fit: cover;
