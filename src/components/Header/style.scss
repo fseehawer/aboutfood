@@ -103,7 +103,7 @@
 
     input:checked ~ ul
     {
-      transform: translate(-99%, 0);
+      transform: translate(-140%, 0);
     }
 
     &__menu-line {
@@ -114,15 +114,19 @@
     &__nav {
       display: block;
       position: fixed;
+      overflow: auto;
+      top: 0;
+      right: -100%;
       background: $background-color;
-      padding: 2rem 3rem;
+      padding: 3rem;
       box-sizing: border-box;
-      width: 60%;
+      width: 70%;
       height: 100%;
       margin: 0;
       transform-origin: 0 0;
       transform: translate(0, 0);
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
       z-index: 99;
 
       li {
