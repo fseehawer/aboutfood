@@ -16,7 +16,7 @@
   &__cards {
     margin: 2rem 0;
     display: grid;
-    grid-gap: 1%;
+    grid-gap: 0;
     grid-template-columns: repeat(auto-fill, 24%);
     justify-content: space-between;
 
