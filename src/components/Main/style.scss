@@ -9,7 +9,9 @@
     }
 
     @media only screen and (max-width: 400px) {
-      margin-left: 0.5rem;
+      margin-left: 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
