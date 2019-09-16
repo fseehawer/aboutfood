@@ -2,7 +2,7 @@ import React  from 'react';
 import './style.scss';
 import PropTypes from "prop-types";
 
-const Filter = React.memo((props) => {
+const Filter = (props) => {
     const onCheckboxChange = () => {
         props.onChange(props.name);
     };
@@ -20,11 +20,12 @@ const Filter = React.memo((props) => {
             {props.name}
         </label>
     );
-});
+};
 
 Filter.propTypes = {
     name: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
+    checked: PropTypes.bool.isRequired,
 };
 
 export default Filter;
